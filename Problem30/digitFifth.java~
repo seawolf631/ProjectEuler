@@ -1,0 +1,19 @@
+class digitFifth{
+
+    public static void main(String[] args){
+	for(int i = 2; i < 1000000000; i++){
+	    int temp = i;
+	    int remainder = temp % 10;
+	    int total = 0;
+	    while(temp >= 1){
+		total += Math.pow(temp,5);
+		temp = temp/10;
+		remainder = temp%10;
+	    }
+	    if(total == i)
+		System.out.println(i);
+	    
+	}
+
+    }
+}

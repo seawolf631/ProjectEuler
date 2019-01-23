@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.Scanner;
+
+class greatestProduct{
+    public static int up(){}
+    public static int down(){}
+    public static int left(){}
+    public static int right(){}
+    public static int diagonalUpLeft(){}
+    public static int diagonalUpRight(){}
+    public static int diagonalDownLeft(){}
+    public static int diagonalDownRight(){}
+    public static void main(String[] args) throws IOException{
+	Scanner sc = new Scanner(new FileInputStream(args[0]));
+	int[][] table = new int[20][20];
+	for(int i = 0; i < 20; i++){
+	    for(int j = 0; j<20; j++){
+		table[i][j] = sc.nextInt();
+	    }
+	}
+	
+    }
+}
