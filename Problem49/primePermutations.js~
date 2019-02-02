@@ -1,0 +1,49 @@
+let primeKey = {};
+function isPrime(x){
+    if(x <= 1)
+	return false;
+    if(primeKey.hasOwnProperty(x))
+	return primeKey[x];
+    for(let i = 2; i < x; i++){
+	if(x % i === 0){
+	    primeKey[x] = false;
+	    return false;
+	}
+    }
+    primeKey[x] = true;
+    return true;
+}
+function sortInteger(x){
+    let digits = x.toString().split('');
+    let sortedDigits = digits.sort();
+    return sortedDigits;
+}
+function hasTwoZeros(x){
+    let numZeros = 0;
+    for(let i = 0; i < x.length; i++){
+	if(x[i] === "0")
+	    numZeros++;
+    }
+    if(numZeros >= 2)
+	return true;
+    else
+	return false;
+}
+function hasSameNumbers(x,y){
+    for(let i = 0; i < x.length; i++){
+	if(x[i] !== y[i])
+	    return false;
+    }
+    return true;
+}
+let numPrimes = 0;
+let arrayOfPrimes = [];
+for(let i = 1000; i<10000; i++){
+    if(isPrime(i) && !hasTwoZeros(sortInteger(i))){
+	console.log(i);
+	numPrimes++;
+	arrayOfPrimes.push(sortInteger(i));
+    }
+}
+console.log("Primes:"+numPrimes);
+console.log(arrayOfPrimes);
