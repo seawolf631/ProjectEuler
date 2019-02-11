@@ -1,0 +1,5 @@
+let limit = 1000;
+for(let i = 10; i < limit; i++){
+    let factorialSum = 0;
+    let arrayOfDigits = i.toString().split("").map(function(x){return parseInt(x)});
+}
