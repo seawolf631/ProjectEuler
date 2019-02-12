@@ -1,0 +1,15 @@
+function sumOfDivisors(x){
+    let total = 0;
+    for(let i = 1; i < x;i++){
+	if(x % i === 0)
+	    total += i;
+    }
+    return total;
+}
+for(let j = 1; j < 10000; j++){
+    let jSum = sumOfDivisors(j);
+    let pairSum = sumOfDivisors(jSum);
+    if(jSum === pairSum)
+	if(j !== jSum)
+	    console.log("A=" + j + "   B=" + jSum);
+}
