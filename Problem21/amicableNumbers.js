@@ -1,3 +1,4 @@
+//Function for d(n) in problem
 function sumOfDivisors(x){
     let total = 0;
     for(let i = 1; i < x;i++){
@@ -15,4 +16,5 @@ for(let a = 1; a < 10000; a++){
 	    answer += a;
 	}
 }
+//Here is the answer
 console.log("The answer is: "  + answer);

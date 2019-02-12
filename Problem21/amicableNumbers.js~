@@ -6,10 +6,13 @@ function sumOfDivisors(x){
     }
     return total;
 }
-for(let j = 1; j < 10000; j++){
-    let jSum = sumOfDivisors(j);
-    let pairSum = sumOfDivisors(jSum);
-    if(jSum === pairSum)
-	if(j !== jSum)
-	    console.log("A=" + j + "   B=" + jSum);
+let answer = 0;
+for(let a = 1; a < 10000; a++){
+    let b = sumOfDivisors(a);
+    let bSum = sumOfDivisors(b);
+    if(a === bSum)
+	if(a !== b){
+	    answer += a;
+	}
 }
+console.log("The answer is: "  + answer);
