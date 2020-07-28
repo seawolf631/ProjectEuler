@@ -1,0 +1,8 @@
+
+pentagonNumbers = []
+
+n = 1
+while True:
+    newNumber = (n * (3*n-1))/2
+    pentagonNumbers.append(newNumber)
+    n += 1
