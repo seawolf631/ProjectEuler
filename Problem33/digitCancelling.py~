@@ -1,0 +1,11 @@
+
+for x in range(10,100):
+    for y in range(10,100):
+        quotient = x / y
+        if quotient < 1:
+            if str(y)[0] in str(x):
+                y = int(str(y)[1])
+                x = int(str(x).replace(str(y)[0],''))
+            elif str(y)[1] in str(x):
+                y = int(str(y)[0])
+                x = int(str(x).replace(str(y)[0],''))
