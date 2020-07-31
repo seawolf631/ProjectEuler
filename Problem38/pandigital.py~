@@ -1,0 +1,14 @@
+
+
+answer = 0
+
+for x in range(1,10):
+    tempAnswer = ''
+    multiple = 1
+    while len(tempAnswer) < 10:
+        tempAnswer += str(x*multiple)
+        multiple += 1
+    if int(tempAnswer) > answer:
+        answer = int(tempAnswer)
+
+print(answer)
