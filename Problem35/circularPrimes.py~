@@ -1,0 +1,24 @@
+import math
+
+def isPrime(num):
+    isPrime = True
+    for x in range(2, int(math.sqrt(num)+1)):
+        if num % x == 0:
+            isPrime = False
+    return isPrime
+
+primeDict = {}
+
+for x in range(2, 100):
+    isPrime = isPrime(x)
+    primeDict[x] = isPrime
+    if isPrime:
+        k = 1
+        isCircular = True
+        while k < (len(str(x)) - 1):
+            x = int(str(x).append(str(x).pop(0)))
+            if primeDict.get(x,False) == False:
+                isCircular = False
+            k += 1
+        if isCircular:
+            print(x)
